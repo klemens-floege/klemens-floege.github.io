@@ -37,9 +37,11 @@ Most of my applications are in the deep generative AI space, where I aim to push
 
 # Interests to show in About widget
 interests:
-  - Artificial Intelligence
-  - Computational Linguistics
-  - Information Retrieval
+- Deep Generative AI
+- Multimodal Tranformers
+- Large Language Models
+- Probability Theory
+- Bayesian Statistics
 
 # Education to show in About widget
 education:
