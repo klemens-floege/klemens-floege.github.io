@@ -17,11 +17,11 @@ image:
 #    name: Follow
 #    url: https://twitter.com/georgecushen
 url_code: ''
-url_pdf: static/uploads/Part_III_Essay_Meta_Learning.pdf
+url_pdf: static/Part_III_Essay_Meta_Learning.pdf
 url_slides: ''
 url_video: ''
 
-slides: example
+slides: 
 ---
 
 
