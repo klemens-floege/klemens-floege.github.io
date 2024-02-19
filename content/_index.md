@@ -110,7 +110,7 @@ sections:
           date_end: ''
           date_start: '2024-02-07'
           description: ''
-          icon: NVIDIA
+          icon: edx
           organization: NVIDIA
           organization_url: https://www.nvidia.com/
           title: Genertive AI with Diffusion Models
@@ -119,7 +119,7 @@ sections:
           date_end: ''
           date_start: '2023-09-28'
           description: Learning the fundamentals about AWS cloud and building applications
-          icon: AWS
+          icon: edx
           organization: AWS
           organization_url: https://aws.amazon.com
           title: AWS Cloud Practitioner
@@ -128,7 +128,7 @@ sections:
           date_end: '2024-11-20'
           date_start: '2024-11-23'
           description: ''
-          icon: JSC
+          icon: edx
           organization: Forschungszentrum Jülich
           organization_url: https://www.fz-juelich.de/en/ias/jsc
           title: 'Introduction to Supercomputing at JSC Theory & Practice'
