@@ -58,7 +58,7 @@ sections:
         - title: Research Scientist
           company: Helmholtz AI
           company_url: ''
-          #company_logo: org-hai
+          company_logo: org-helmholtz_ai
           location: Munich, Germany
           date_start: '2023-11-01'
           date_end: ''
@@ -76,7 +76,7 @@ sections:
         - title: Teaching Assistant
           company: ETH Zürich
           company_url: ''
-          #company_logo: org-eth
+          company_logo: org-eth
           location: Zürich, Switzerland
           date_start: '2020-09-01'
           date_end: '2021-12-31'
