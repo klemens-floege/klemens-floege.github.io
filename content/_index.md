@@ -125,7 +125,7 @@ sections:
           title: AWS Cloud Practitioner
           url: https://aws.amazon.com/certification/certified-cloud-practitioner/
         - certificate_url: ''
-          date_end: '2024-11-20'
+          date_end: ''
           date_start: '2024-11-23'
           description: ''
           #icon: edx
