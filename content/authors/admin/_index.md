@@ -110,10 +110,10 @@ social:
   - icon: linkedin    # LinkedIn
     icon_pack: fab
     link: www.linkedin.com/in/klemens-flöge-884123a0
-  - icon: cv
-    icon_pack: ai
-    link: uploads/CV_Klemens_Floege_standard.pdf
-    label: Download my resume
+  #- icon: cv
+  #  icon_pack: ai
+  #  link: uploads/CV_Klemens_Floege_standard.pdf
+  #  label: Download my resume
   # Link to a PDF of your resume/CV.
   # To use: copy your resume to `static/uploads/resume.pdf`, enable `ai` icons in `params.yaml`,
   # and uncomment the lines below.

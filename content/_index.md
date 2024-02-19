@@ -67,7 +67,7 @@ sections:
         - title: Data Science Intern
           company: BASF SE
           company_url: ''
-          #company_logo: org-basf
+          company_logo: org-basf
           location: Schwarzheide, Germany
           date_start: '2023-07-01'
           date_end: '2023-09-30'
@@ -110,7 +110,7 @@ sections:
           date_end: ''
           date_start: '2024-02-07'
           description: ''
-          icon: edx
+          company_logo: nvidia
           organization: NVIDIA
           organization_url: https://www.nvidia.com/
           title: Genertive AI with Diffusion Models
