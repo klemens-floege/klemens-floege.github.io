@@ -22,7 +22,7 @@ role: PhD student in Probabilistic Machine Learning
 
 # Organizations/Affiliations to show in About widget
 organizations:
-  - name: Techical University of Munich
+  - name: Technical University of Munich
     url: https://www.tum.de/en/
   - name: Helmholtz AI
     url: https://www.helmholtz.ai  
