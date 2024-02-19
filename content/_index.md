@@ -58,7 +58,7 @@ sections:
         - title: Research Scientist
           company: Helmholtz AI
           company_url: ''
-          company_logo: org-hai
+          #company_logo: org-hai
           location: Munich, Germany
           date_start: '2023-11-01'
           date_end: ''
@@ -67,7 +67,7 @@ sections:
         - title: Data Science Intern
           company: BASF SE
           company_url: ''
-          company_logo: org-basf
+          #company_logo: org-basf
           location: Schwarzheide, Germany
           date_start: '2023-07-01'
           date_end: '2023-09-30'
@@ -76,7 +76,7 @@ sections:
         - title: Teaching Assistant
           company: ETH Zürich
           company_url: ''
-          company_logo: org-eth
+          #company_logo: org-eth
           location: Zürich, Switzerland
           date_start: '2020-09-01'
           date_end: '2021-12-31'
@@ -85,7 +85,7 @@ sections:
         - title: Intern
           company: DrSmile
           company_url: ''
-          company_logo: org-drs
+          #company_logo: org-drs
           location: Berlin, Germany
           date_start: '2017-10-01'
           date_end: '2017-12-31'
@@ -243,39 +243,37 @@ sections:
       title: Contact
       subtitle:
       text: |-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mi diam, venenatis ut magna et, vehicula efficitur enim.
+        Please feel free to contact me via E-Mail
       # Contact (add or remove contact options as necessary)
-      email: test@example.org
-      phone: 888 888 88 88
-      appointment_url: 'https://calendly.com'
-      address:
-        street: 450 Serra Mall
-        city: Stanford
-        region: CA
-        postcode: '94305'
-        country: United States
-        country_code: US
-      directions: Enter Building 1 and take the stairs to Office 200 on Floor 2
-      office_hours:
-        - 'Monday 10:00 to 13:00'
-        - 'Wednesday 09:00 to 10:00'
+      email: klemens.floege@helmholtz-munich.de
+      #address:
+      #  street: 450 Serra Mall
+      #  city: Stanford
+      #  region: CA
+      #  postcode: '94305'
+      #  country: United States
+      #  country_code: US
+      #directions: Enter Building 1 and take the stairs to Office 200 on Floor 2
+      #office_hours:
+      #  - 'Monday 10:00 to 13:00'
+      #  - 'Wednesday 09:00 to 10:00'
       # Choose a map provider in `params.yaml` to show a map from these coordinates
-      coordinates:
-        latitude: '37.4275'
-        longitude: '-122.1697'  
-      contact_links:
-        - icon: twitter
-          icon_pack: fab
-          name: DM Me
-          link: 'https://twitter.com/Twitter'
-        - icon: skype
-          icon_pack: fab
-          name: Skype Me
-          link: 'skype:echo123?call'
-        - icon: video
-          icon_pack: fas
-          name: Zoom Me
-          link: 'https://zoom.com'
+      #coordinates:
+      #  latitude: '37.4275'
+      #  longitude: '-122.1697'  
+      #contact_links:
+      #  - icon: twitter
+      #    icon_pack: fab
+      #    name: DM Me
+      #    link: 'https://twitter.com/Twitter'
+      #  - icon: skype
+      #    icon_pack: fab
+      #    name: Skype Me
+      #    link: 'skype:echo123?call'
+      #  - icon: video
+      #    icon_pack: fas
+      #    name: Zoom Me
+      #    link: 'https://zoom.com'
       # Automatically link email and phone or display as text?
       autolink: true
       # Email form provider
