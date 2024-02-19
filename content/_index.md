@@ -53,36 +53,44 @@ sections:
   - block: experience
     content:
       title: Experience
-      # Date format for experience
-      #   Refer to https://docs.hugoblox.com/customization/#date-format
       date_format: Jan 2006
-      # Experiences.
-      #   Add/remove as many `experience` items below as you like.
-      #   Required fields are `title`, `company`, and `date_start`.
-      #   Leave `date_end` empty if it's your current employer.
-      #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
       items:
-        - title: CEO
-          company: GenCoin
+        - title: Research Scientist
+          company: Helmholtz AI
           company_url: ''
-          company_logo: org-gc
-          location: California
-          date_start: '2021-01-01'
+          company_logo: org-hai
+          location: Munich, Germany
+          date_start: '2023-11-01'
           date_end: ''
           description: |2-
-              Responsibilities include:
-
-              * Analysing
-              * Modelling
-              * Deploying
-        - title: Professor of Semiconductor Physics
-          company: University X
+              Current projects include enhancing Bayesian particle-based inference through Hessian computations, incorporating topological priors into diffusion models, building multi-modal protein transformers, and uncertainty quantification for low-rank adapted LLMs.
+        - title: Data Science Intern
+          company: BASF SE
           company_url: ''
-          company_logo: org-x
-          location: California
-          date_start: '2016-01-01'
-          date_end: '2020-12-31'
-          description: Taught electronic engineering and researched semiconductor physics.
+          company_logo: org-basf
+          location: Schwarzheide, Germany
+          date_start: '2023-07-01'
+          date_end: '2023-09-30'
+          description: |2-
+              Worked in the Digitalisation service unit, focusing on sensor data analysis and prediction of malfunctions in a chemical adhesives plant using Python, Pandas, and TensorFlow. Engaged in machine learning models including autoencoders, CNNs, RNNs, and LSTMs.
+        - title: Teaching Assistant
+          company: ETH Zürich
+          company_url: ''
+          company_logo: org-eth
+          location: Zürich, Switzerland
+          date_start: '2020-09-01'
+          date_end: '2021-12-31'
+          description: |2-
+              Taught courses including Digital Circuits Laboratory, Real Analysis, Engineering Mechanics, and Multivariable Calculus. Responsibilities included preparing and teaching example classes and correcting exercises.
+        - title: Intern
+          company: DrSmile
+          company_url: ''
+          company_logo: org-drs
+          location: Berlin, Germany
+          date_start: '2017-10-01'
+          date_end: '2017-12-31'
+          description: |2-
+              Involved in internal operations, tracking product delivery, and customer procedure progress. Played a key role in setting up the first retail location.
     design:
       columns: '2'
   - block: accomplishments
@@ -98,33 +106,33 @@ sections:
       #   Leave other parameters empty if not required.
       #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
       items:
-        - certificate_url: https://www.coursera.org
+        - certificate_url: https://courses.nvidia.com/certificates/f8a9af2f4003411d87878bb653afadaf/
           date_end: ''
-          date_start: '2021-01-25'
+          date_start: '2024-02-07'
           description: ''
-          icon: coursera
-          organization: Coursera
-          organization_url: https://www.coursera.org
-          title: Neural Networks and Deep Learning
-          url: ''
-        - certificate_url: https://www.edx.org
+          icon: NVIDIA
+          organization: NVIDIA
+          organization_url: https://www.nvidia.com/
+          title: Genertive AI with Diffusion Models
+          url: https://www.nvidia.com/en-us/training/instructor-led-workshops/generative-ai-with-diffusion-models/
+        - certificate_url: https://www.credly.com/badges/78ce308b-e0d4-4336-b1f7-210fd4aeea77
           date_end: ''
-          date_start: '2021-01-01'
-          description: Formulated informed blockchain models, hypotheses, and use cases.
-          icon: edx
-          organization: edX
-          organization_url: https://www.edx.org
-          title: Blockchain Fundamentals
-          url: https://www.edx.org/professional-certificate/uc-berkeleyx-blockchain-fundamentals
+          date_start: '2023-09-28'
+          description: Learning the fundamentals about AWS cloud and building applications
+          icon: AWS
+          organization: AWS
+          organization_url: https://aws.amazon.com
+          title: AWS Cloud Practitioner
+          url: https://aws.amazon.com/certification/certified-cloud-practitioner/
         - certificate_url: https://www.datacamp.com
-          date_end: '2020-12-21'
-          date_start: '2020-07-01'
+          date_end: '2024-11-20'
+          date_start: '2024-11-23'
           description: ''
-          icon: datacamp
-          organization: DataCamp
-          organization_url: https://www.datacamp.com
-          title: 'Object-Oriented Programming in R'
-          url: ''
+          icon: JSC
+          organization: Forschungszentrum Jülich
+          organization_url: https://www.fz-juelich.de/en/ias/jsc
+          title: 'Introduction to Supercomputing at JSC Theory & Practice'
+          url: https://www.fz-juelich.de/en/ias/jsc/news/events/training-courses/2023/supercomputing-2
     design:
       columns: '2'
   - block: collection
