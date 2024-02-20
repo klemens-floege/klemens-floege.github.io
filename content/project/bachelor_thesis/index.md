@@ -14,7 +14,7 @@ image:
   focal_point: "Smart"
 
 url_code: ''
-url_pdf: 'static/uploads/Bachelor_Thesis_Klemens_Floege.pdf'
+#url_pdf: 
 url_slides: ''
 url_video: ''
 

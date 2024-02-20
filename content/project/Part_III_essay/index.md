@@ -8,7 +8,7 @@ date: '2023-05-04T00:00:00Z'
 external_link: ''
 
 image:
-  caption: "Illustration of Meta-Learning Concepts"
+  caption: "Illustration of Meta-Learning Concepts on the sinusoids example with meta-learning a Bayesian Neural Network prior"
   focal_point: "Smart"
 
 #links:
@@ -17,11 +17,11 @@ image:
 #    name: Follow
 #    url: https://twitter.com/georgecushen
 url_code: ''
-url_pdf: static/uploads/Part_III_Essay_Meta_Learning.pdf
+#url_pdf: static/uploads/Part_III_Essay_Meta_Learning.pdf
 url_slides: ''
 url_video: ''
 
-slides: example
+slides:
 ---
 
 
