@@ -46,6 +46,9 @@ interests:
 # Education to show in About widget
 education:
   courses:
+  - course: Dr.-Ing. in Computer Science
+    institution: Technical University of Munich
+    year: 2026
   - course: MASt in Applied Mathematics
     institution: University of Cambridge
     year: 2023
@@ -88,19 +91,19 @@ skills:
         icon: dumbbell
         icon_pack: fas
       - name: Traveling
-        description: 'Traveling to far countries'
+        description: 'Traveling to far countries, mainly in Oceania, Asia and South America'
         percent: ''
         icon: globe-americas
         icon_pack: fas
       - name: Cooking
-        description: ''
-        percent: ''
+        description: 'Currently still improving'
+        percent: '20'
         icon: utensils
         icon_pack: fas
-      - name: Reading
-        description: 'Movie connoisseurship'
-        percent: ''
-        icon: book-open
+      - name: Movie connoisseurship
+        description: ''
+        percent: '70'
+        icon: movie
         icon_pack: fas
 
 # Social/Academic Networking

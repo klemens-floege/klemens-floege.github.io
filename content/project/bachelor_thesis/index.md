@@ -18,7 +18,6 @@ url_code: ''
 url_slides: ''
 url_video: ''
 
-slides: example
 ---
 
 This thesis undertakes a detailed exploration into the manipulation of electric field distributions within Fabry-Pérot micro-cavities through the novel introduction of hexagonal Boron Nitride (hBN) lenses. Leveraging advanced simulation tools, the study systematically dissects the impact of hBN lens shapes on electric field behaviors, unveiling a spectrum of photon confinement phenomena and laying foundational insights for future optical cavity designs. The successful replication of existing models and subsequent original analysis mark a pivotal step towards harnessing the full potential of micro-cavities in optical research and applications.
