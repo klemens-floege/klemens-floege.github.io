@@ -56,41 +56,51 @@ education:
 # Skills
 # For available icons, see: https://docs.hugoblox.com/getting-started/page-builder/#icons
 skills:
-  - name: Technical
+  - name: Skills and Languages
     items:
-      - name: Python
-        description: ''
-        percent: 80
-        icon: python
-        icon_pack: fab
-      - name: Data Science
-        description: ''
-        percent: 100
-        icon: chart-line
+      - name: Languages
+        description: 'German (native), English (fluent), French (B1-B2)'
+        percent: ''
+        icon: language
         icon_pack: fas
-      - name: SQL
-        description: ''
-        percent: 40
-        icon: database
+      - name: Programming
+        description: 'Python, C/C++, R, SQL, TensorFlow, TensorFlow Probability, Numpy, PyTorch, Pandas, CUDA'
+        percent: ''
+        icon: laptop-code
+        icon_pack: fas
+      - name: Simulation
+        description: 'COMSOL Multiphysics, MATLAB, SciPy'
+        percent: ''
+        icon: project-diagram
+        icon_pack: fas
+      - name: Other
+        description: 'AWS Cloud Practitioner Certification, LATEX, Ubuntu'
+        percent: ''
+        icon: tools
         icon_pack: fas
   - name: Hobbies
     color: '#eeac02'
     color_border: '#f0bf23'
     items:
-      - name: Hiking
+      - name: Calisthenics
         description: ''
-        percent: 60
-        icon: person-hiking
+        percent: ''
+        icon: dumbbell
         icon_pack: fas
-      - name: Cats
-        description: ''
-        percent: 100
-        icon: cat
+      - name: Traveling
+        description: 'Traveling to far countries'
+        percent: ''
+        icon: globe-americas
         icon_pack: fas
-      - name: Photography
+      - name: Cooking
         description: ''
-        percent: 80
-        icon: camera-retro
+        percent: ''
+        icon: utensils
+        icon_pack: fas
+      - name: Reading
+        description: 'Movie connoisseurship'
+        percent: ''
+        icon: book-open
         icon_pack: fas
 
 # Social/Academic Networking
