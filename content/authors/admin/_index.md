@@ -77,7 +77,7 @@ skills:
         icon: project-diagram
         icon_pack: fas
       - name: Other
-        description: 'AWS Cloud Practitioner Certification, LATEX, Ubuntu'
+        description: 'AWS Cloud, LATEX, Ubuntu'
         percent: ''
         icon: tools
         icon_pack: fas
