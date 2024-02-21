@@ -46,9 +46,6 @@ interests:
 # Education to show in About widget
 education:
   courses:
-  - course: Dr.-Ing. in Computer Science
-    institution: Technical University of Munich
-    year: 2026
   - course: MASt in Applied Mathematics
     institution: University of Cambridge
     year: 2023
