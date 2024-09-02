@@ -108,9 +108,9 @@ skills:
 #   For an email link, use "fas" icon pack, "envelope" icon, and a link in the
 #   form "mailto:your-email@example.com" or "/#contact" for contact widget.
 social:
-  - icon: globe   # personal website
-    icon_pack: fas
-    link: https://klemens-floege.github.io
+  #- icon: globe   # personal website
+  #  icon_pack: fas
+  #  link: https://klemens-floege.github.io
   - icon: envelope    # email
     icon_pack: fas
     link: 'mailto:klemens.floege@helmholtz-munich.de'
@@ -119,7 +119,10 @@ social:
     link: https://github.com/klemens-floege
   - icon: linkedin    # LinkedIn
     icon_pack: fab
-    link: www.linkedin.com/in/klemens-flöge-884123a0
+    link: https://www.linkedin.com/in/klemens-flöge-884123a0  
+  - icon: google-scholar
+    icon_pack: ai
+    link: https://scholar.google.com/citations?user=XhyfDk8AAAAJ&hl=en
   #- icon: cv
   #  icon_pack: ai
   #  link: uploads/CV_Klemens_Floege_standard.pdf
