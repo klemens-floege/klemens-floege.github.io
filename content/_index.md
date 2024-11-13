@@ -55,7 +55,7 @@ sections:
       title: Experience
       date_format: Jan 2006
       items:
-        - title: Research Scientist
+        - title: ML Researcher
           company: Helmholtz AI
           company_url: ''
           company_logo: org-helmholtz_ai
@@ -198,7 +198,7 @@ sections:
   #  design:
   #    columns: '1'
   - block: collection
-    id: featured
+    id: publications
     content:
       title: Publications
       filters:
