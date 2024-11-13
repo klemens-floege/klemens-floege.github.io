@@ -47,12 +47,12 @@ links:
   url: http://example.org
 url_pdf: http://arxiv.org/pdf/1512.04133v1
 url_code: 'https://github.com/HugoBlox/hugo-blox-builder'
-url_dataset: '#'
-url_poster: '#'
-url_project: ''
-url_slides: ''
-url_source: '#'
-url_video: '#'
+#url_dataset: '#'
+#url_poster: '#'
+#url_project: ''
+#url_slides: ''
+#url_source: '#'
+#url_video: '#'
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
@@ -76,10 +76,6 @@ image:
 #   Otherwise, set `slides: ""`.
 #slides: example
 ---
-
-{{% callout note %}}
-Create your slides in Markdown - click the *Slides* button to check out the example.
-{{% /callout %}}
 
 The OneProt project demonstrates how multi-modal protein data—spanning sequences, structures, binding sites, and text annotations—can be integrated into a cohesive latent space using the ImageBind framework. This preprint details OneProt's architecture, its alignment strategy, and its performance across tasks like enzyme function prediction and gene ontology annotation.
 
