@@ -13,7 +13,7 @@ authors:
 - Alina Bazarova
 - Erinc Merdivan
 date: "2024-11-07"
-doi: "10.48550/arXiv.2411.04863"
+#doi: "10.48550/arXiv.2411.04863"
 
 # Schedule page publish date (NOT publication's date).
 publishDate: "2024-11-07"
@@ -43,10 +43,10 @@ tags:
 featured: true
 
 links:
-- name: Custom Link
-  url: http://example.org
+- name: arXiv
+  url: https://arxiv.org/abs/2411.04863
 url_pdf: http://arxiv.org/pdf/1512.04133v1
-url_code: 'https://github.com/HugoBlox/hugo-blox-builder'
+url_code: 'https://github.com/klemens-floege/oneprot.git'
 #url_dataset: '#'
 #url_poster: '#'
 #url_project: ''

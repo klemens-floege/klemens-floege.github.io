@@ -5,7 +5,7 @@ authors:
 - Mohammed Abdul Moeed
 - Vincent Fortuin
 date: "2024-11-04"
-doi: "10.48550/arXiv.2411.01887"
+#doi: "10.48550/arXiv.2411.01887"
 
 # Schedule page publish date (NOT publication's date).
 publishDate: "2024-11-07"
@@ -13,7 +13,7 @@ publishDate: "2024-11-07"
 # Publication type.
 # Accepts a single type but formatted as a YAML list (for Hugo requirements).
 # Enter a publication type from the CSL standard.
-publication_types: ["conference-paper"]
+publication_types: ["workshop-paper"]
 
 # Publication name and optional abbreviated publication name.
 publication: "ICML 2024 Workshop on Structured Probabilistic Inference & Generative Modeling"
@@ -35,7 +35,7 @@ tags:
 featured: true
 
 links:
-- name: View Paper
+- name: arXiv
   url: https://arxiv.org/abs/2411.01887
 url_pdf: https://arxiv.org/pdf/2411.01887
 url_code: 'https://github.com/klemens-floege/svn_ensembles.git'
