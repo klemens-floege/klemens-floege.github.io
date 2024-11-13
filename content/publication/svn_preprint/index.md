@@ -8,7 +8,7 @@ date: "2024-11-04"
 #doi: "10.48550/arXiv.2411.01887"
 
 # Schedule page publish date (NOT publication's date).
-publishDate: "2024-11-07"
+publishDate: "2024-11-04"
 
 # Publication type.
 # Accepts a single type but formatted as a YAML list (for Hugo requirements).
