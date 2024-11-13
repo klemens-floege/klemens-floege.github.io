@@ -18,14 +18,14 @@ status:
 superuser: true
 
 # Role/position/tagline
-role: PhD student in Probabilistic Machine Learning
+#role: PhD student in Probabilistic Machine Learning
 
 # Organizations/Affiliations to show in About widget
-organizations:
-  - name: Technical University of Munich
-    url: https://www.tum.de/en/
-  - name: Helmholtz AI
-    url: https://www.helmholtz.ai  
+#organizations:
+#  - name: Technical University of Munich
+#    url: https://www.tum.de/en/
+#  - name: Helmholtz AI
+#    url: https://www.helmholtz.ai  
 
 
 # Short bio (displayed in user profile at end of posts)
@@ -113,7 +113,7 @@ social:
   #  link: https://klemens-floege.github.io
   - icon: envelope    # email
     icon_pack: fas
-    link: 'mailto:klemens.floege@helmholtz-munich.de'
+    link: 'mailto:klemens.floege@gmail.com'
   - icon: github      # Github
     icon_pack: fab
     link: https://github.com/klemens-floege

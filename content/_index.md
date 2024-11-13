@@ -245,7 +245,7 @@ sections:
       text: |-
         Please feel free to contact me via E-Mail
       # Contact (add or remove contact options as necessary)
-      email: klemens.floege@helmholtz-munich.de
+      email: klemens.floege@gmail.com
       #address:
       #  street: 450 Serra Mall
       #  city: Stanford
