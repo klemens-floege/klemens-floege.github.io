@@ -46,7 +46,7 @@ url_code: 'https://github.com/fortuinlab/swag-lora'
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
 image:
-  caption: 'Overview of Gaussian Stochastic Weight Averaging with LoRA, demonstrating its ability to improve calibration and generalization of fine-tuned LLMs while maintaining computational efficiency.'
+  caption: 'Outline of the SWAG-LoRA training and inference process. The left panel shows the LLM architecture with LoRA fine-tuning. The middle and upper right panel depict the SWAG training process, where weight samples are collected across iterations of SGD to calculate the mean and an approximate covariance of the posterior over network weights. The lower right panel demonstrates how we form our ensemble of weights for inference by sampling from the learned SWAG posterior.'
   focal_point: ""
   preview_only: false
 
