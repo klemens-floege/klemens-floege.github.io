@@ -1,30 +1,46 @@
 ---
-title: "An example preprint / working paper"
+title: "OneProt: Towards Multi-Modal Protein Foundation Models"
 authors:
-- admin
-date: "2019-04-07T00:00:00Z"
-doi: ""
+- Klemens Flöge
+- Srisruthi Udayakumar
+- Johanna Sommer
+- Marie Piraud
+- Stefan Kesselheim
+- Vincent Fortuin
+- Stephan Günneman
+- Karel J van der Weg
+- Holger Gohlke
+- Alina Bazarova
+- Erinc Merdivan
+date: "2024-11-07"
+doi: "10.48550/arXiv.2411.04863"
 
 # Schedule page publish date (NOT publication's date).
-publishDate: "2017-01-01T00:00:00Z"
+publishDate: "2024-11-07"
 
 # Publication type.
 # Accepts a single type but formatted as a YAML list (for Hugo requirements).
 # Enter a publication type from the CSL standard.
-publication_types: ["article"]
+publication_types: ["preprint"]
 
 # Publication name and optional abbreviated publication name.
-publication: ""
-publication_short: ""
+publication: "arXiv"
+publication_short: "arXiv"
 
-abstract: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.
+abstract: >
+  Recent AI advances have enabled multi-modal systems to model and translate diverse information spaces. Extending beyond text and vision, we introduce OneProt, a multi-modal AI for proteins that integrates structural, sequence, alignment, and binding site data. Using the ImageBind framework, OneProt aligns the latent spaces of modality encoders along protein sequences. It demonstrates strong performance in retrieval tasks and surpasses state-of-the-art methods in various downstream tasks, including metal ion binding classification, gene-ontology annotation, and enzyme function prediction. This work expands multi-modal capabilities in protein models, paving the way for applications in drug discovery, biocatalytic reaction planning, and protein engineering.
 
 # Summary. An optional shortened abstract.
-summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum.
+summary: >
+  OneProt, a multi-modal AI for proteins, integrates sequence, structure, alignment, and binding site data using the ImageBind framework. It achieves strong performance on retrieval and downstream tasks, advancing protein-related applications.
 
 tags:
-- Source Themes
-featured: false
+- Multi-modal AI
+- Protein modeling
+- Deep learning
+- Drug discovery
+- Protein engineering
+featured: true
 
 links:
 - name: Custom Link
@@ -41,7 +57,7 @@ url_video: '#'
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
 image:
-  caption: 'Image credit: [**Unsplash**](https://unsplash.com/photos/s9CC2SKySJM)'
+  caption: 'Overview of the OneProt model. The model aligns multiple modalities, including primary protein sequence, 3D protein structure, binding pockets and text annotations. Each modality is processed by its respective encoder, generating embeddings that are then aligned in a shared latent space, facilitating cross-modal learning and integration.'
   focal_point: ""
   preview_only: false
 
@@ -50,19 +66,21 @@ image:
 #   Simply enter your project's folder or file name without extension.
 #   E.g. `internal-project` references `content/project/internal-project/index.md`.
 #   Otherwise, set `projects: []`.
-projects:
-- internal-project
+#projects:
+#- oneprot
 
 # Slides (optional).
 #   Associate this publication with Markdown slides.
 #   Simply enter your slide deck's filename without extension.
 #   E.g. `slides: "example"` references `content/slides/example/index.md`.
 #   Otherwise, set `slides: ""`.
-slides: example
+#slides: example
 ---
 
 {{% callout note %}}
 Create your slides in Markdown - click the *Slides* button to check out the example.
 {{% /callout %}}
 
-Add the publication's **full text** or **supplementary notes** here. You can use rich formatting such as including [code, math, and images](https://docs.hugoblox.com/content/writing-markdown-latex/).
+The OneProt project demonstrates how multi-modal protein data—spanning sequences, structures, binding sites, and text annotations—can be integrated into a cohesive latent space using the ImageBind framework. This preprint details OneProt's architecture, its alignment strategy, and its performance across tasks like enzyme function prediction and gene ontology annotation.
+
+View the paper on [arXiv](https://arxiv.org/abs/2411.04863) or explore the [OneProt code repository](https://github.com/klemens-floege/oneprot.git) for implementation details.

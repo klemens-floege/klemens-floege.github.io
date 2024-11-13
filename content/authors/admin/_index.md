@@ -29,11 +29,7 @@ superuser: true
 
 
 # Short bio (displayed in user profile at end of posts)
-bio: "I am a German national from Hannover and a PhD student in the ELPIS group, with a solid background in engineering and applied mathematics. My academic journey and professional experiences have equipped me with a deep understanding of technical principles and a passion for innovative solutions. I am particularly interested in applying Bayesian principles, especially uncertainty quantification, to large-scale AI systems, with a focus on transformer architectures and diffusion models.
-
-My research interests are rooted in the potential of AI to transform industries and improve lives. I am deeply fascinated by the healthcare sector and protein analysis space, where I believe AI can make significant breakthroughs in understanding complex biological processes and developing new treatments. Additionally, my work explores the intricacies of natural language processing (NLP) and the challenges of quantifying uncertainties in large language models (LLMs). These areas are crucial for enhancing the reliability and interpretability of AI systems in real-world applications.
-
-Most of my applications are in the deep generative AI space, where I aim to push the boundaries of what is possible with current technologies. By leveraging my expertise in Bayesian methods and my keen interest in transformer architectures and diffusion models, I strive to contribute to the development of AI models that are not only powerful but also trustworthy and transparent. Through my research, I hope to address some of the most pressing challenges in AI, particularly in healthcare and NLP, and to pave the way for new discoveries that can benefit society at large."
+bio: "I am a researcher with expertise in applied mathematics, machine learning, and data science. With a background from Cambridge and ETH Zürich, my work spans uncertainty quantification, protein modeling, and industrial AI applications."
 
 # Interests to show in About widget
 interests:
@@ -138,9 +134,9 @@ social:
 highlight_name: true
 ---
 
-I am a German national from Hannover and a PhD student in the ELPIS group, with a solid background in engineering and applied mathematics. My academic journey and professional experiences have equipped me with a deep understanding of technical principles and a passion for innovative solutions. I am particularly interested in applying Bayesian principles, especially uncertainty quantification, to large-scale AI systems, with a focus on transformer architectures and diffusion models.
+I am a researcher with a strong interdisciplinary background in applied mathematics, electrical engineering, and management. I completed my MASt in Applied Mathematics (Part III of the Mathematical Tripos) at the University of Cambridge, where I focused on statistics and probability. Prior to that, I earned a BSc in Electrical Engineering and Information Technology from ETH Zürich, specializing in quantum photonics and control.
 
-My research interests are rooted in the potential of AI to transform industries and improve lives. I am deeply fascinated by the healthcare sector and protein analysis space, where I believe AI can make significant breakthroughs in understanding complex biological processes and developing new treatments. Additionally, my work explores the intricacies of natural language processing (NLP) and the challenges of quantifying uncertainties in large language models (LLMs). These areas are crucial for enhancing the reliability and interpretability of AI systems in real-world applications.
+Recently, I was working as an ML researcher at Helmholtz AI, where I focus on uncertainty quantification for large language models, cross-modal protein retrieval, and Bayesian inference techniques. My research has been published on platforms like arXiv and combines theoretical insights with practical applications in areas such as foundation models and explainable AI. I also gained industry experience as a data science intern at BASF SE, where I developed predictive maintenance models for chemical production processes.
 
-Most of my applications are in the deep generative AI space, where I aim to push the boundaries of what is possible with current technologies. By leveraging my expertise in Bayesian methods and my keen interest in transformer architectures and diffusion models, I strive to contribute to the development of AI models that are not only powerful but also trustworthy and transparent. Through my research, I hope to address some of the most pressing challenges in AI, particularly in healthcare and NLP, and to pave the way for new discoveries that can benefit society at large.
+I am fluent in German and English, proficient in programming languages such as Python, C++, and CUDA, and experienced with machine learning frameworks like PyTorch, TensorFlow, and Huggingface. Beyond my technical work, I have held leadership roles, including serving as a board member of the Engineering Association at ETH and as president of the LSE Bankside House Committee.
 {style="text-align: justify;"}

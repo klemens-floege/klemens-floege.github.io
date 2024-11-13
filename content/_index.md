@@ -61,7 +61,7 @@ sections:
           company_logo: org-helmholtz_ai
           location: Munich, Germany
           date_start: '2023-11-01'
-          date_end: ''
+          date_end: '2024-10-01'
           description: |2-
               Current projects include enhancing Bayesian particle-based inference through Hessian computations, incorporating topological priors into diffusion models, building multi-modal protein transformers, and uncertainty quantification for low-rank adapted LLMs.
         - title: Data Science Intern
@@ -197,17 +197,17 @@ sections:
   #      {{< gallery album="demo" >}}
   #  design:
   #    columns: '1'
-  #- block: collection
-  #  id: featured
-  #  content:
-  #    title: Featured Publications
-  #    filters:
-  #      folders:
-  #        - publication
-  #      featured_only: true
-  #  design:
-  #    columns: '2'
-  #    view: card
+  - block: collection
+    id: featured
+    content:
+      title: Featured Publications
+      filters:
+        folders:
+          - publication
+        featured_only: true
+    design:
+      columns: '2'
+      view: card
   #- block: collection
   #  content:
   #    title: Recent Publications
