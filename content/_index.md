@@ -65,7 +65,7 @@ sections:
           company_logo: org-priorlabs
           location: Berlin, Germany
           date_start: '2025-04-14'
-          date_end: 'now'
+          date_end: ''
           description: |2-
               Building Tabular Foundation models.
         - title: ML Researcher
