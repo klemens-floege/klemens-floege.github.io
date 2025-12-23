@@ -64,7 +64,7 @@ sections:
           company_url: 'https://priorlabs.ai'
           company_logo: org-priorlabs
           location: Berlin, Germany
-          date_start: '2025-14-04'
+          date_start: '2025-04-14'
           date_end: 'now'
           description: |2-
               Building Tabular Foundation models.
