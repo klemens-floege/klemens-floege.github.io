@@ -59,6 +59,15 @@ sections:
       title: Experience
       date_format: Jan 2006
       items:
+        - title: Applied AI Scientist
+          company: Prior Labs
+          company_url: 'https://priorlabs.ai'
+          company_logo: org-priorlabs
+          location: Berlin, Germany
+          date_start: '2025-14-04'
+          date_end: 'now'
+          description: |2-
+              Building Tabular Foundation models.
         - title: ML Researcher
           company: Helmholtz AI
           company_url: ''
