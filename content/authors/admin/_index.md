@@ -33,8 +33,8 @@ bio: "I am a researcher with expertise in applied mathematics, machine learning,
 
 # Interests to show in About widget
 interests:
-- Deep Generative AI
-- Multimodal Tranformers
+- Foundation Models
+- Multimodality
 - Large Language Models
 - Probability Theory
 - Bayesian Statistics
