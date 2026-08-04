@@ -22,6 +22,6 @@ written to accompany it.
 
 The material works through topology, differential calculus in several dimensions,
 optimisation, implicit functions and diffeomorphisms, multiple integrals, and the major
-integral theorems — Green's, Gauss's and Stokes's. The script is deliberately written to
+integral theorems: Green's, Gauss's and Stokes's. The script is deliberately written to
 build intuition first and formalism second, bringing the theory closer to how students
 actually reason about it.

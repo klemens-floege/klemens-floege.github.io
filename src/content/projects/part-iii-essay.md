@@ -25,6 +25,6 @@ PAC-Bayesian lens, which turns "it works on these benchmarks" into bounds you ca
 
 The centrepiece is the **PACOH** algorithm, treated as a class of meta-learners with
 probabilistic performance guarantees. From there the essay reads optimisation-based
-meta-learners — MAML and REPTILE among them — through the same framework, showing how
+meta-learners such as MAML and REPTILE through the same framework, showing how
 existing algorithms can be contextualised and theoretically supported rather than merely
 benchmarked. Numerical experiments accompany the theory throughout.

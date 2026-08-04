@@ -9,13 +9,13 @@ interface Props {
   /** Page title. The site name is appended automatically, except on the homepage. */
   title?: string
   description?: string
-  /** Set on the homepage so the `<title>` is not `Klemens Flöge — Klemens Flöge`. */
+  /** Set on the homepage so the `<title>` is not `Klemens Flöge · Klemens Flöge`. */
   isHome?: boolean
 }
 
 const { title, description = profile.tagline, isHome = false } = Astro.props
 
-const pageTitle = isHome || !title ? `${profile.name} — ${profile.role}` : `${title} · ${profile.name}`
+const pageTitle = isHome || !title ? `${profile.name} · ${profile.role}` : `${title} · ${profile.name}`
 const canonical = new URL(Astro.url.pathname, Astro.site)
 
 const NAV = [
@@ -39,6 +39,8 @@ const repoUrl = 'https://github.com/klemens-floege/klemens-floege.github.io'
     <meta name="author" content={profile.name} />
     <link rel="canonical" href={canonical} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="alternate icon" href="/favicon-32.png" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="sitemap" href="/sitemap-index.xml" />
 
     <meta property="og:type" content={isHome ? 'profile' : 'article'} />

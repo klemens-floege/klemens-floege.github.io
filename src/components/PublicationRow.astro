@@ -20,7 +20,7 @@ const href = `/publications/${entry.id}/`
 
   <div>
     <h3 class="row__title"><a href={href}>{title}</a></h3>
-    <AuthorList authors={authors} />
+    <AuthorList authors={authors} max={8} />
     <p class="row__sub venue">
       <span>{venueShort ?? venue}</span>
       <span class="tag">{kind}</span>

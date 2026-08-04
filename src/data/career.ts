@@ -56,7 +56,7 @@ export const experience: readonly Role[] = [
     start: '2020-09',
     end: '2021-12',
     description:
-      'Taught Digital Circuits Laboratory, Real Analysis, Engineering Mechanics and Multivariable Calculus — preparing and delivering example classes and marking exercises.',
+      'Taught Digital Circuits Laboratory, Real Analysis, Engineering Mechanics and Multivariable Calculus, preparing and delivering example classes and marking exercises.',
   },
   {
     title: 'Intern',
@@ -85,7 +85,7 @@ export const education: readonly Degree[] = [
     institution: 'University of Cambridge',
     href: 'https://www.maths.cam.ac.uk',
     year: 2023,
-    note: 'Part III of the Mathematical Tripos — statistics and probability.',
+    note: 'Part III of the Mathematical Tripos, focused on statistics and probability.',
   },
   {
     qualification: 'BSc',
@@ -93,7 +93,7 @@ export const education: readonly Degree[] = [
     institution: 'ETH Zürich',
     href: 'https://ethz.ch',
     year: 2022,
-    note: 'Specialisation in quantum photonics and control.',
+    note: 'Specialisation in quantum photonics and control systems.',
   },
 ]
 

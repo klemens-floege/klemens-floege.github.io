@@ -3,15 +3,26 @@ import { AUTHOR_NAME } from '~/data/profile'
 
 interface Props {
   authors: readonly string[]
+  /** Truncate to this many names and append "et al.". Omit to show all. */
+  max?: number
   class?: string
 }
 
-const { authors, class: className } = Astro.props
+const { authors, max, class: className } = Astro.props
+
+const truncated = max !== undefined && authors.length > max
+let shown = truncated ? authors.slice(0, max) : [...authors]
+
+// A 40-author paper must still show whose page this is, so if the highlighted
+// name falls outside the cut, pull it in rather than hiding it behind "et al.".
+if (truncated && !shown.includes(AUTHOR_NAME) && authors.includes(AUTHOR_NAME)) {
+  shown = [...shown.slice(0, Math.max(0, max - 1)), AUTHOR_NAME]
+}
 ---
 
 <p class:list={['authors', className]}>
   {
-    authors.map((author, index) => (
+    shown.map((author, index) => (
       <Fragment>
         {index > 0 && <span class="authors__sep">, </span>}
         <span class:list={['authors__name', { 'authors__name--self': author === AUTHOR_NAME }]}>
@@ -19,7 +30,7 @@ const { authors, class: className } = Astro.props
         </span>
       </Fragment>
     ))
-  }
+  }{truncated && <span class="authors__more"> et al.</span>}
 </p>
 
 <style>
@@ -32,5 +43,10 @@ const { authors, class: className } = Astro.props
   .authors__name--self {
     color: var(--fg);
     font-weight: 500;
+  }
+
+  .authors__more {
+    font-style: italic;
+    color: var(--fg-faint);
   }
 </style>

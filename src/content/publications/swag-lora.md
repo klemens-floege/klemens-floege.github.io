@@ -45,7 +45,7 @@ links:
   code: https://github.com/fortuinlab/swag-lora
 ---
 
-Fine-tuned LLMs are badly calibrated, especially on small datasets — they are confidently
+Fine-tuned LLMs are badly calibrated, especially on small datasets; they are confidently
 wrong. Full Bayesian treatment is out of reach at this scale, so the question is how much
 you can recover cheaply.
 

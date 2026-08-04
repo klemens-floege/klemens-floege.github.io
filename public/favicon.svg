@@ -1,12 +1,21 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="KF">
-  <rect width="32" height="32" rx="7" fill="#1b1e26" />
-  <text
-    x="16"
-    y="22"
-    text-anchor="middle"
-    font-family="Iowan Old Style, Georgia, serif"
-    font-size="16"
-    font-weight="500"
-    fill="#f7f5f1"
-  >KF</text>
+  <!--
+    Drawn as strokes rather than a <text> element: browsers rasterise favicons
+    without reliable font layout, so text-based marks render inconsistently.
+    Inverts with the browser UI theme so it stays legible on either chrome.
+  -->
+  <style>
+    .tile { fill: #16181d; }
+    .mark { stroke: #f7f5f1; }
+    @media (prefers-color-scheme: dark) {
+      .tile { fill: #f7f5f1; }
+      .mark { stroke: #16181d; }
+    }
+  </style>
+  <rect class="tile" width="32" height="32" rx="7" />
+  <g class="mark" fill="none" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M11 8.5V23.5" />
+    <path d="M21.4 8.9 12.6 16.6" />
+    <path d="M12.6 15.5 21.9 23.3" />
+  </g>
 </svg>

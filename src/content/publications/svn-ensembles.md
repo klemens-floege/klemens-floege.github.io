@@ -44,7 +44,7 @@ links:
 ---
 
 Deep ensembles are one of the most reliable tools for uncertainty quantification, and
-they have a clean Bayesian reading — but standard training throws away the second-order
+they have a clean Bayesian reading, but standard training throws away the second-order
 structure of the loss landscape entirely. Now that scalable Hessian approximations are
 practical, that is a waste.
 

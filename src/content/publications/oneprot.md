@@ -1,5 +1,5 @@
 ---
-title: 'OneProt: Towards Multi-Modal Protein Foundation Models'
+title: 'OneProt: Towards Multi-Modal Protein Foundation Models via Latent Space Alignment of Sequence, Structure, Binding Sites and Text Encoders'
 authors:
   - Klemens Flöge
   - Srisruthi Udayakumar
@@ -10,12 +10,12 @@ authors:
   - Stephan Günnemann
   - Karel J. van der Weg
   - Holger Gohlke
-  - Alina Bazarova
   - Erinc Merdivan
-date: 2024-11-07
-venue: arXiv preprint
-venueShort: arXiv
-kind: preprint
+  - Alina Bazarova
+date: 2025-11-13
+venue: PLOS Computational Biology 21(11), e1013679
+venueShort: PLOS Computational Biology
+kind: journal
 featured: true
 summary: >-
   A multi-modal protein model that aligns sequence, structure, binding-site and
@@ -43,13 +43,14 @@ tags:
   - Representation learning
   - Drug discovery
 links:
+  doi: https://doi.org/10.1371/journal.pcbi.1013679
+  pdf: https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1013679&type=printable
   arxiv: https://arxiv.org/abs/2411.04863
-  pdf: https://arxiv.org/pdf/2411.04863
   code: https://github.com/klemens-floege/oneprot
 ---
 
-OneProt shows how multi-modal protein data — sequences, 3D structures, binding sites and
-text annotations — can be folded into a single coherent latent space using the ImageBind
+OneProt shows how multi-modal protein data (sequences, 3D structures, binding sites and
+text annotations) can be folded into a single coherent latent space using the ImageBind
 framework. Each modality keeps its own encoder; alignment happens along the primary
 protein sequence, which acts as the anchor modality.
 
