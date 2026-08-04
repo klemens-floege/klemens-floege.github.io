@@ -1,0 +1,186 @@
+---
+import { Font } from 'astro:assets'
+
+import ThemeToggle from '~/components/ThemeToggle.astro'
+import { profile } from '~/data/profile'
+import '~/styles/global.css'
+
+interface Props {
+  /** Page title. The site name is appended automatically, except on the homepage. */
+  title?: string
+  description?: string
+  /** Set on the homepage so the `<title>` is not `Klemens Flöge — Klemens Flöge`. */
+  isHome?: boolean
+}
+
+const { title, description = profile.tagline, isHome = false } = Astro.props
+
+const pageTitle = isHome || !title ? `${profile.name} — ${profile.role}` : `${title} · ${profile.name}`
+const canonical = new URL(Astro.url.pathname, Astro.site)
+
+const NAV = [
+  { label: 'About', href: '/#about' },
+  { label: 'Publications', href: '/#publications' },
+  { label: 'Projects', href: '/#projects' },
+  { label: 'Contact', href: '/#contact' },
+] as const
+
+const year = new Date().getUTCFullYear()
+const repoUrl = 'https://github.com/klemens-floege/klemens-floege.github.io'
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content={profile.name} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <meta property="og:type" content={isHome ? 'profile' : 'article'} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta name="twitter:card" content="summary" />
+
+    <Font cssVariable="--font-sans" preload />
+    <Font cssVariable="--font-serif" preload />
+
+    {/* Resolve the theme before first paint so there is no flash of the wrong one. */}
+    <script is:inline>
+      ;(() => {
+        let stored = null
+        try {
+          stored = localStorage.getItem('theme')
+        } catch {}
+        document.documentElement.dataset.theme =
+          stored === 'light' || stored === 'dark'
+            ? stored
+            : matchMedia('(prefers-color-scheme: dark)').matches
+              ? 'dark'
+              : 'light'
+      })()
+    </script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="masthead">
+      <div class="shell masthead__inner">
+        <a class="masthead__name" href="/">{profile.name}</a>
+        <nav class="masthead__nav" aria-label="Sections">
+          {NAV.map((item) => <a href={item.href}>{item.label}</a>)}
+        </nav>
+        <ThemeToggle />
+      </div>
+    </header>
+
+    <main id="main">
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell site-footer__inner">
+        <p>© {year} {profile.name}</p>
+        <p class="site-footer__meta">
+          Built with <a href="https://astro.build">Astro</a> · <a href={repoUrl}>Source</a>
+        </p>
+      </div>
+    </footer>
+
+    <style>
+      .masthead {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        background: color-mix(in oklab, var(--bg) 82%, transparent);
+        backdrop-filter: saturate(1.4) blur(10px);
+        border-bottom: 1px solid transparent;
+        transition: border-color 0.2s var(--ease);
+      }
+
+      /* Only show the rule once the page has scrolled away from the top. */
+      :global(body[data-scrolled='true']) .masthead {
+        border-bottom-color: var(--rule);
+      }
+
+      .masthead__inner {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        height: 3.75rem;
+      }
+
+      .masthead__name {
+        font-family: var(--font-display);
+        font-size: 1.0625rem;
+        font-weight: 500;
+        letter-spacing: -0.01em;
+        text-decoration: none;
+        white-space: nowrap;
+      }
+
+      .masthead__nav {
+        display: flex;
+        gap: 1.25rem;
+        margin-left: auto;
+        font-size: var(--step--1);
+      }
+
+      .masthead__nav a {
+        color: var(--fg-muted);
+        text-decoration: none;
+      }
+
+      .masthead__nav a:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 34rem) {
+        .masthead__nav {
+          display: none;
+        }
+
+        .theme-toggle {
+          margin-left: auto;
+        }
+      }
+
+      main {
+        padding-bottom: var(--section-gap);
+      }
+
+      .site-footer {
+        border-top: 1px solid var(--rule);
+        padding-block: 2rem;
+        font-size: var(--step--1);
+        color: var(--fg-faint);
+      }
+
+      .site-footer__inner {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem 1.5rem;
+        justify-content: space-between;
+      }
+
+      .site-footer a {
+        color: inherit;
+      }
+    </style>
+
+    <script>
+      // Drives the masthead hairline. Passive listener, one class toggle.
+      const setScrolled = (): void => {
+        document.body.dataset['scrolled'] = String(window.scrollY > 8)
+      }
+      setScrolled()
+      window.addEventListener('scroll', setScrolled, { passive: true })
+    </script>
+  </body>
+</html>

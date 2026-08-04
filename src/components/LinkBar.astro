@@ -1,0 +1,28 @@
+---
+import Icon from './Icon.astro'
+import { resolveLinks, type LinkSet } from '~/lib/links'
+
+interface Props {
+  links: LinkSet
+  /** Accessible context, e.g. the title of the paper these links belong to. */
+  label: string
+}
+
+const { links, label } = Astro.props
+const resolved = resolveLinks(links)
+---
+
+{
+  resolved.length > 0 && (
+    <ul class="linkbar" aria-label={`Links for ${label}`}>
+      {resolved.map((link) => (
+        <li>
+          <a href={link.href} rel="noopener">
+            <Icon name={link.icon} />
+            {link.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  )
+}

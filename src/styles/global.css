@@ -1,0 +1,391 @@
+/* ---------------------------------------------------------------------------
+   Design tokens
+   Two surfaces, one accent, four text weights. Everything else is typography
+   and whitespace — no cards, no shadows, no gradients.
+--------------------------------------------------------------------------- */
+
+:root {
+  color-scheme: light;
+
+  --bg: oklch(99% 0.003 95);
+  --bg-sunk: oklch(97% 0.004 95);
+  --fg: oklch(22% 0.008 265);
+  --fg-muted: oklch(48% 0.011 265);
+  --fg-faint: oklch(63% 0.011 265);
+  --rule: oklch(90% 0.006 265);
+  --rule-strong: oklch(82% 0.008 265);
+  --accent: oklch(52% 0.153 264);
+  --accent-quiet: oklch(95% 0.022 264);
+  --selection: oklch(88% 0.06 264);
+
+  --font-body: var(--font-sans), sans-serif;
+  --font-display: var(--font-serif), serif;
+
+  --measure: 46rem;
+  --gutter: clamp(1.25rem, 5vw, 2.5rem);
+  --section-gap: clamp(3.5rem, 9vw, 6rem);
+
+  --step--1: clamp(0.8125rem, 0.79rem + 0.11vw, 0.875rem);
+  --step-0: clamp(1rem, 0.97rem + 0.16vw, 1.0625rem);
+  --step-1: clamp(1.125rem, 1.08rem + 0.23vw, 1.25rem);
+  --step-2: clamp(1.375rem, 1.28rem + 0.45vw, 1.625rem);
+  --step-3: clamp(1.75rem, 1.55rem + 1vw, 2.375rem);
+  --step-4: clamp(2.5rem, 1.9rem + 3vw, 4rem);
+
+  --ease: cubic-bezier(0.2, 0, 0, 1);
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+
+  --bg: oklch(17% 0.008 265);
+  --bg-sunk: oklch(21% 0.009 265);
+  --fg: oklch(93% 0.005 95);
+  --fg-muted: oklch(72% 0.009 265);
+  --fg-faint: oklch(57% 0.01 265);
+  --rule: oklch(28% 0.01 265);
+  --rule-strong: oklch(36% 0.012 265);
+  --accent: oklch(79% 0.13 264);
+  --accent-quiet: oklch(28% 0.045 264);
+  --selection: oklch(38% 0.09 264);
+}
+
+/* ---------------------------------------------------------------------------
+   Base
+--------------------------------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  /* Keep anchored sections clear of the sticky masthead. */
+  scroll-padding-top: 5.5rem;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: var(--step-0);
+  line-height: 1.65;
+  font-synthesis-weight: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-variant-numeric: tabular-nums;
+  transition:
+    background-color 0.25s var(--ease),
+    color 0.25s var(--ease);
+}
+
+::selection {
+  background: var(--selection);
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 500;
+  line-height: 1.15;
+  text-wrap: balance;
+  letter-spacing: -0.015em;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+a {
+  color: inherit;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+  text-decoration-color: var(--rule-strong);
+  transition:
+    color 0.15s var(--ease),
+    text-decoration-color 0.15s var(--ease);
+}
+
+a:hover {
+  color: var(--accent);
+  text-decoration-color: currentColor;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* ---------------------------------------------------------------------------
+   Layout primitives
+--------------------------------------------------------------------------- */
+
+.shell {
+  width: 100%;
+  max-width: var(--measure);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  z-index: 100;
+  padding: 0.625rem 1rem;
+  background: var(--bg);
+  border: 1px solid var(--rule-strong);
+  border-radius: 4px;
+}
+
+.skip-link:focus {
+  left: var(--gutter);
+  top: 0.75rem;
+}
+
+/* Small uppercase section label sitting above a hairline. */
+.section {
+  margin-top: var(--section-gap);
+  scroll-margin-top: 5rem;
+}
+
+.section__label {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--fg-faint);
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.section__label a {
+  text-decoration: none;
+  color: var(--fg-faint);
+}
+
+.section__label a:hover {
+  color: var(--accent);
+}
+
+/* Two-column rows: fixed date gutter, flexible body. Collapses on narrow screens. */
+.row {
+  display: grid;
+  grid-template-columns: 5.5rem 1fr;
+  gap: 0 1.75rem;
+  padding-block: 1.5rem;
+  border-top: 1px solid var(--rule);
+}
+
+.row:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.row__meta {
+  font-size: var(--step--1);
+  color: var(--fg-faint);
+  line-height: 1.5;
+  padding-top: 0.28rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.row__title {
+  font-family: var(--font-display);
+  font-size: var(--step-1);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+
+.row__title a {
+  text-decoration: none;
+}
+
+.row__title a:hover {
+  color: var(--accent);
+}
+
+.row__sub {
+  font-size: var(--step--1);
+  color: var(--fg-muted);
+  margin-top: 0.3rem;
+}
+
+@media (max-width: 40rem) {
+  .row {
+    grid-template-columns: 1fr;
+    gap: 0.4rem;
+  }
+
+  .row__meta {
+    padding-top: 0;
+    order: -1;
+  }
+}
+
+/* Inline list of external links: arXiv · PDF · Code */
+.linkbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.875rem;
+  margin-top: 0.75rem;
+  font-size: var(--step--1);
+}
+
+.linkbar a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: var(--fg-muted);
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule-strong);
+  padding-bottom: 1px;
+}
+
+.linkbar a:hover {
+  color: var(--accent);
+  border-bottom-color: currentColor;
+}
+
+.linkbar svg {
+  width: 0.8em;
+  height: 0.8em;
+  opacity: 0.75;
+}
+
+/* Small pill used for venue kind / project kind. */
+.tag {
+  display: inline-block;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  background: var(--bg-sunk);
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  padding: 0.1rem 0.5rem;
+  line-height: 1.6;
+  white-space: nowrap;
+}
+
+/* Prose blocks rendered from markdown. */
+.prose > * + * {
+  margin-top: 1.1em;
+}
+
+.prose h2,
+.prose h3 {
+  font-family: var(--font-display);
+  margin-top: 2em;
+  font-size: var(--step-2);
+}
+
+.prose h3 {
+  font-size: var(--step-1);
+}
+
+.prose a {
+  color: var(--accent);
+}
+
+.prose code {
+  font-size: 0.9em;
+  background: var(--bg-sunk);
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  padding: 0.1em 0.35em;
+}
+
+.prose blockquote {
+  border-left: 2px solid var(--rule-strong);
+  padding-left: 1.25rem;
+  color: var(--fg-muted);
+  font-style: italic;
+}
+
+/* ---------------------------------------------------------------------------
+   Motion
+--------------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Print — an academic page gets printed. Make that look deliberate.
+--------------------------------------------------------------------------- */
+
+@media print {
+  :root {
+    --bg: #fff;
+    --fg: #000;
+    --fg-muted: #333;
+    --fg-faint: #555;
+    --rule: #ddd;
+    --accent: #000;
+  }
+
+  .masthead,
+  .theme-toggle,
+  .skip-link,
+  .site-footer__meta {
+    display: none !important;
+  }
+
+  .section {
+    break-inside: avoid;
+    margin-top: 2rem;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}

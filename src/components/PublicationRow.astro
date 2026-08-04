@@ -1,0 +1,40 @@
+---
+import type { CollectionEntry } from 'astro:content'
+
+import AuthorList from './AuthorList.astro'
+import LinkBar from './LinkBar.astro'
+
+interface Props {
+  entry: CollectionEntry<'publications'>
+}
+
+const { entry } = Astro.props
+const { title, authors, date, venue, venueShort, kind, links } = entry.data
+const href = `/publications/${entry.id}/`
+---
+
+<article class="row">
+  <div class="row__meta">
+    <time datetime={date.toISOString().slice(0, 10)}>{date.getUTCFullYear()}</time>
+  </div>
+
+  <div>
+    <h3 class="row__title"><a href={href}>{title}</a></h3>
+    <AuthorList authors={authors} />
+    <p class="row__sub venue">
+      <span>{venueShort ?? venue}</span>
+      <span class="tag">{kind}</span>
+    </p>
+    <LinkBar links={links} label={title} />
+  </div>
+</article>
+
+<style>
+  .venue {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.4rem 0.625rem;
+    margin-top: 0.4rem;
+  }
+</style>

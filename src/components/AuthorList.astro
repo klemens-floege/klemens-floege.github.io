@@ -1,0 +1,36 @@
+---
+import { AUTHOR_NAME } from '~/data/profile'
+
+interface Props {
+  authors: readonly string[]
+  class?: string
+}
+
+const { authors, class: className } = Astro.props
+---
+
+<p class:list={['authors', className]}>
+  {
+    authors.map((author, index) => (
+      <Fragment>
+        {index > 0 && <span class="authors__sep">, </span>}
+        <span class:list={['authors__name', { 'authors__name--self': author === AUTHOR_NAME }]}>
+          {author}
+        </span>
+      </Fragment>
+    ))
+  }
+</p>
+
+<style>
+  .authors {
+    font-size: var(--step--1);
+    color: var(--fg-muted);
+    line-height: 1.55;
+  }
+
+  .authors__name--self {
+    color: var(--fg);
+    font-weight: 500;
+  }
+</style>

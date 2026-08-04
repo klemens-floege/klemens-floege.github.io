@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://klemens-floege.github.io/sitemap-index.xml

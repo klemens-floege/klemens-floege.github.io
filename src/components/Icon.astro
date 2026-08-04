@@ -1,0 +1,29 @@
+---
+import { ICONS, type IconName } from '~/lib/icons'
+
+interface Props {
+  name: IconName
+  /** Defaults to `1em` so icons scale with whatever text they sit beside. */
+  size?: string
+  class?: string
+}
+
+const { name, size = '1em', class: className } = Astro.props
+const icon = ICONS[name]
+const stroked = icon.mode === 'stroke'
+---
+
+<svg
+  class={className}
+  width={size}
+  height={size}
+  viewBox={icon.viewBox}
+  fill={stroked ? 'none' : 'currentColor'}
+  stroke={stroked ? 'currentColor' : undefined}
+  stroke-width={stroked ? 1.75 : undefined}
+  stroke-linecap={stroked ? 'round' : undefined}
+  stroke-linejoin={stroked ? 'round' : undefined}
+  aria-hidden="true"
+  focusable="false"
+  set:html={icon.body}
+/>

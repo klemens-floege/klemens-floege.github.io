@@ -1,0 +1,144 @@
+---
+import type { GetStaticPaths } from 'astro'
+import { Image } from 'astro:assets'
+import { getCollection, render, type CollectionEntry } from 'astro:content'
+
+import Icon from '~/components/Icon.astro'
+import LinkBar from '~/components/LinkBar.astro'
+import Base from '~/layouts/Base.astro'
+import { formatMonthYear, isoDate } from '~/lib/format'
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const entries = await getCollection('projects')
+  return entries.map((entry) => ({ params: { id: entry.id }, props: { entry } }))
+}
+
+interface Props {
+  entry: CollectionEntry<'projects'>
+}
+
+const { entry } = Astro.props
+const { title, date, kind, institution, summary, figure, figureCaption, tags, links } = entry.data
+const { Content } = await render(entry)
+---
+
+<Base title={title} description={summary}>
+  <article class="shell project">
+    <a class="back" href="/#projects">
+      <Icon name="arrowLeft" size="0.9rem" />
+      All projects
+    </a>
+
+    <header class="project__head">
+      <h1>{title}</h1>
+      <p class="project__meta">
+        {institution && <span>{institution}</span>}
+        <span class="project__dot">·</span>
+        <time datetime={isoDate(date)}>{formatMonthYear(date)}</time>
+        <span class="tag">{kind}</span>
+      </p>
+      <LinkBar links={links} label={title} />
+    </header>
+
+    {
+      figure && (
+        <figure class="project__figure">
+          <Image src={figure} alt={figureCaption ?? `Figure from ${title}`} widths={[640, 960]} />
+          {figureCaption && <figcaption>{figureCaption}</figcaption>}
+        </figure>
+      )
+    }
+
+    <div class="prose">
+      <Content />
+    </div>
+
+    {
+      tags.length > 0 && (
+        <ul class="tags" aria-label="Topics">
+          {tags.map((tag) => (
+            <li class="tag">{tag}</li>
+          ))}
+        </ul>
+      )
+    }
+  </article>
+</Base>
+
+<style>
+  .project {
+    padding-top: 2.5rem;
+  }
+
+  .back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: var(--step--1);
+    color: var(--fg-faint);
+    text-decoration: none;
+  }
+
+  .back:hover {
+    color: var(--accent);
+  }
+
+  .project__head {
+    margin-top: 1.75rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .project__head h1 {
+    font-family: var(--font-display);
+    font-size: var(--step-3);
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+  }
+
+  .project__meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.4rem 0.5rem;
+    margin-top: 0.75rem;
+    font-size: var(--step--1);
+    color: var(--fg-faint);
+  }
+
+  .project__dot {
+    color: var(--rule-strong);
+  }
+
+  .project__figure {
+    margin-top: 2.5rem;
+  }
+
+  .project__figure :global(img) {
+    width: 100%;
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    background: var(--bg-sunk);
+  }
+
+  .project__figure figcaption {
+    margin-top: 0.75rem;
+    font-size: var(--step--1);
+    color: var(--fg-faint);
+    line-height: 1.55;
+  }
+
+  .prose {
+    margin-top: 2.5rem;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--rule);
+  }
+</style>

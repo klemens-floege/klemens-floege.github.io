@@ -1,0 +1,46 @@
+---
+import type { CollectionEntry } from 'astro:content'
+
+import LinkBar from './LinkBar.astro'
+
+interface Props {
+  entry: CollectionEntry<'projects'>
+}
+
+const { entry } = Astro.props
+const { title, date, kind, institution, summary, links } = entry.data
+const href = `/projects/${entry.id}/`
+---
+
+<article class="row">
+  <div class="row__meta">
+    <time datetime={date.toISOString().slice(0, 10)}>{date.getUTCFullYear()}</time>
+  </div>
+
+  <div>
+    <h3 class="row__title"><a href={href}>{title}</a></h3>
+    <p class="row__sub meta">
+      {institution && <span>{institution}</span>}
+      <span class="tag">{kind}</span>
+    </p>
+    <p class="summary">{summary}</p>
+    <LinkBar links={links} label={title} />
+  </div>
+</article>
+
+<style>
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.4rem 0.625rem;
+    margin-top: 0.4rem;
+  }
+
+  .summary {
+    font-size: var(--step--1);
+    color: var(--fg-muted);
+    margin-top: 0.6rem;
+    max-width: 42rem;
+  }
+</style>
